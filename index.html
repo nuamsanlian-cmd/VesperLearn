@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>English4U</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <div class="container">
+    <h1>Chapel Service Assistant</h1>
+    
+    <div class="form-group">
+        <label>1. Responsive Reading</label>
+        <div class="flex-row">
+            <input type="text" id="readingTitle" placeholder="Scripture Title" style="flex-grow: 2;">
+            <input type="text" id="pageNumber" placeholder="Page No." style="flex-grow: 1;">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>2. The Preacher (Speaker)</label>
+        <select id="teacherSelect" onchange="toggleInput('teacherSelect', 'manualSpeaker')">
+            <option value="">-- Choose Teacher --</option>
+            <option value="Prof. Rev. Dr. Nang Sawm Piang">Prof. Rev. Dr. Nang Sawm Piang</option>
+            <option value="Prof. Rev. Suan Khan Lian">Prof. Rev. Suan Khan Lian</option>
+            <option value="Prof. Rev. Dr. Smith Ngulh Za Thawng">Prof. Rev. Dr. Smith Ngulh Za Thawng</option>
+            <option value="Prof. Rev. Dr. Pau Lian Mang">Prof. Rev. Dr. Pau Lian Mang</option>
+            <option value="Saya Kham Suan Dal">Saya Kham Suan Dal</option>
+            <option value="Saya Thang Sian Sum">Saya Thang Sian Sum</option>
+            <option value="Ps. Ocean Sueng Hyun Oh">Ps. Ocean Sueng Hyun Oh</option>
+            <option value="Mrs. Lian Za Cing">Mrs. Lian Za Cing</option>
+            <option value="Mrs. Ning San Lun">Mrs. Ning San Lun</option>
+            <option value="Mrs. Cing Lian Muan Cing">Mrs. Cing Lian Muan Cing</option>
+            <option value="MANUAL">-- Type Name Manually --</option>
+        </select>
+        <input type="text" id="manualSpeaker" placeholder="Type Speaker Name..." style="margin-top:8px; display:none;">
+    </div>
+
+    <div class="form-group">
+        <label>3. Offering & Soloist</label>
+        <div class="flex-row">
+            <select id="offeringTitle" class="small-select"><option>Mr.</option><option>Ms.</option></select>
+            <input type="text" id="offeringName" placeholder="Name for Prayer" class="large-input">
+        </div>
+        <div class="flex-row" style="margin-top:5px;">
+            <select id="a1Title" class="small-select"><option>Mr.</option><option>Ms.</option></select>
+            <input type="text" id="assist1" placeholder="Assistant 1 Name" class="large-input">
+        </div>
+        <div class="flex-row" style="margin-top:5px;">
+            <select id="a2Title" class="small-select"><option>Mr.</option><option>Ms.</option></select>
+            <input type="text" id="assist2" placeholder="Assistant 2 Name" class="large-input">
+        </div>
+        <div class="flex-row" style="margin-top:5px;">
+            <select id="soloTitle" class="small-select"><option>Mr.</option><option>Ms.</option></select>
+            <input type="text" id="soloName" placeholder="Soloist Name" class="large-input">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>4. Special Prayer (Student)</label>
+        <div class="flex-row">
+            <select id="prayerTitle" class="small-select"><option>Mr.</option><option>Ms.</option></select>
+            <input type="text" id="prayerName" placeholder="Enter Name" class="large-input">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>5. Group Song</label>
+        <select id="groupSongSelect" onchange="toggleInput('groupSongSelect', 'manualGroup')">
+            <option value="Pathein Hostellers">Pathein Hostellers</option>
+            <option value="Phyar Pone Hostellers">Phyar Pone Hostellers</option>
+            <option value="Bagaya Hostellers">Bagaya Hostellers</option>
+            <option value="Sanchaung Hostellers">Sanchaung Hostellers</option>
+            <option value="U San Nyunt Hostellers">U San Nyunt Hostellers</option>
+            <option value="Tha Pyae Nyo Hostellers">Tha Pyae Nyo Hostellers</option>
+            <option value="Y1 Students">Y1 Students</option>
+            <option value="Y2 Students">Y2 Students</option>
+            <option value="Y3 Students">Y3 Students</option>
+            <option value="Y4 Students">Y4 Students</option>
+            <option value="M1 Students">M1 Students</option>
+            <option value="M2 Students">M2 Students</option>
+            <option value="M3 Students">M3 Students</option>
+            <option value="Female Students">Female Students</option>
+            <option value="Male Students">Male Students</option>
+            <option value="Student Council">Student Council</option>
+            <option value="MANUAL">-- Type Group Manually --</option>
+        </select>
+        <input type="text" id="manualGroup" placeholder="Type Group Name..." style="margin-top:8px; display:none;">
+    </div>
+
+    <button class="main-btn" onclick="generateScript()">GENERATE FULL SCRIPT</button>
+    
+    <div id="scriptContainer" style="display:none;">
+        <div id="scriptResult"></div>
+        <button class="copy-btn" onclick="copyText()">Copy Script to Clipboard</button>
+    </div>
+</div>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
