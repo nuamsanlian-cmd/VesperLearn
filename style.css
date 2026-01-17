@@ -1,0 +1,14 @@
+:root { --blue: #1a5276; --instruction-blue: #0000FF; }
+body { font-family: 'Segoe UI', sans-serif; background-color: #f0f4f8; padding: 15px; }
+.container { max-width: 550px; margin: auto; background: #fff; padding: 25px; border-radius: 12px; border-top: 10px solid var(--blue); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+h1 { color: var(--blue); text-align: center; }
+label { display: block; margin-top: 15px; font-weight: bold; color: #34495e; font-size: 14px; }
+input, select { padding: 10px; border: 2px solid #d6eaf8; border-radius: 6px; margin-top: 5px; font-size: 16px; box-sizing: border-box; }
+.main-btn { width: 100%; padding: 15px; background: var(--blue); color: white; border: none; border-radius: 8px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 20px; }
+.copy-btn { width: 100%; padding: 10px; background: #2ecc71; color: white; border: none; border-radius: 8px; margin-top: 10px; cursor: pointer; font-weight: bold; }
+.flex-row { display: flex; gap: 8px; align-items: center; }
+.small-select { width: 75px !important; }
+.large-input { flex-grow: 1; }
+#scriptResult { margin-top: 25px; padding: 20px; background: #f9f9f9; border: 2px solid var(--blue); white-space: pre-wrap; font-size: 18px; line-height: 1.7; border-radius: 8px; color: #333; }
+.blue-text { color: var(--instruction-blue); font-weight: bold; }
+.admin-divider { border-top: 2px dashed #ccc; margin: 20px 0; padding-top: 10px; }
